@@ -1,9 +1,29 @@
 class Solution:
     def get_minimizer(self, iterations: int, learning_rate: float, init: int) -> float:
-        x = init
 
+
+
+        x=init
         for _ in range(iterations):
-            grad = 2 * x
-            x = x - learning_rate * grad
+            grad=2*x
+            x=x-grad*learning_rate
+        return round(x,5)
+        # Objective function: f(x) = x^2
+        # Derivative:         f'(x) = 2x
+        # Update rule:        x = x - learning_rate * f'(x)
+        # Round final answer to 5 decimal places
+        pass
 
-        return round(x, 5)
+
+
+
+
+# class Solution:
+#     def get_minimizer(self, iterations: int, learning_rate: float, init: int) -> float:
+#         x = init
+
+#         for _ in range(iterations):
+#             grad = 2 * x
+#             x = x - learning_rate * grad
+
+#         return round(x, 5)
